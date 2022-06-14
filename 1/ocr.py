@@ -16,3 +16,8 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 # use Tesseract to OCR the image
 text = pytesseract.image_to_string(image)
 print(text)
+
+with open('text.txt', 'w') as f:
+    f.write(text)
+
+#!mkdri wynik
