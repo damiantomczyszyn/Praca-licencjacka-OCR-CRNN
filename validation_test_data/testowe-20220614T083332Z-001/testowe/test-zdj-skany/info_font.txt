@@ -1,3 +1,0 @@
-Book_light_  rozmiar 12
-OCR-B rozmiar 14
-Bookman-Demi rozmiar 14
