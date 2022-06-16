@@ -1,0 +1,9 @@
+all_bez_rotacji_1
+Epoch 57/150
+703/704 [============================>.] - ETA: 0s - loss: 0.1250 - accuracy: 0.9579
+Epoch 57: val_loss improved from 0.61019 to 0.58989, saving model to all_bez_rotacji_1.hdf5
+704/704 [==============================] - 123s 175ms/step - loss: 0.1250 - accuracy: 0.9579 - val_loss: 0.5899 - val_accuracy: 0.9130
+
+
+
+
