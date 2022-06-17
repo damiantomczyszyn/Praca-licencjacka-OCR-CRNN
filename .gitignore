@@ -1,4 +1,7 @@
 Program/
-program_test/OCR/weights00000003.h5
-program_test/OCR/weights00000005.h5
-program_test/OCR/wszystkie_gen2.hdf5
+*.h5
+*.hdf5
+program_test/CRNN/content/Data-generator-for-CRNN/images/
+program_test/CRNN/content/Data-generator-for-CRNN/annotation.txt
+program_test/CRNN/content/Data-generator-for-CRNN/max_label_len.txt
+#example comment
