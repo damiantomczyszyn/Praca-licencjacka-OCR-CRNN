@@ -137,7 +137,7 @@ def unet(pretrained_weights = None,input_size = (512,512,1)):
     return model
 
 model=unet()
-model.load_weights('word_seg_model.h5')
+model.load_weights('weights00000003.h5')
 
 
 

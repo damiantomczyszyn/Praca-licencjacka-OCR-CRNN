@@ -74,7 +74,7 @@ act_model = Model(inputs, outputs)
 
 
 
-act_model.load_weights('all_bez_rotacji_1.hdf5') # wszystkie znaki bez przecinka , nie działa wypisuje SSSSS jako odstepy
+act_model.load_weights('wszystkie_gen2.hdf5') # wszystkie znaki bez przecinka , nie działa wypisuje SSSSS jako odstepy
 #act_model.load_weights('CRNN_model_downloaded.hdf5')# male litery podstawowy pobrany
 #act_model.load_weights('my_CRNN_model.hdf5')# male litery podstawowy przeszkolony samemu, tutaj powiela  eee na końcu wyrazów
 #act_model.load_weights('myn_best_model.hdf5')# male litery podstawowy przeszkolony samemu, tutaj działa
