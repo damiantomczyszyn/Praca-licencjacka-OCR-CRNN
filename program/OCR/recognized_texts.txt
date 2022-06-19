@@ -1,29 +1,10 @@
-St Bertrandde Comminges is a decaved town on the
- spurs ofthePyrenees?notvery far from Toulouse? and
-stillnearerto Bagneresde4Luchon Itwas the site ofa
-bishopric until the Revolution? and has a cathedral
-which is visitedby acertainnumber oftourists In the
- t5mgcH8g?nBo5bmu5mvwdu this oldeworld
- place L I can hardlv dignifv it with the name of city?
-for there are not a thousand inhabitants. He was a
-Cambridge man? who hadcome speciallv from Tou.
-louse to see St Bertrands Church. andhad left two
-friends. who wereless keen archaeologists than him.
-self? in theirhote1atToulouee. underpromiseto ioin
-him on the following morning. Half an hour at the
-church would satisfy the? and all three could then
- pursue their journev inthe directionofAuch Butour
-Englishman had come earlv on the dav in auestion.
- andproposed to himselfto fill a notebook and to use
-several dozens of plates in the process ofdescribing
- and photographing everv corner of the wonderful
- church that dominates theIirtchillofCommingcs In
-order to carrv out this design satisfactorily? it was
-necessary to monopolise the verger ofthe church for
-the dav. .The verger or sacristan I prefer the latter
-appellation? inaccurate as it maybe?was accordingly
-sent for bv the somewhat brusaue ladv who keeps the
-inn of the Chapeau Rouge? and when he came? the
-Englishman found him an unexpectedly interesting
-obiect ofstudy. It was not in thepersonal appearance
- ofthe little?dry? wizcnedoldmanthat the interest lay?
+Region of interest pooIing expIained
+Fei ruan 28. 2047 .Datascience,Deej teamninq Machine ieamina .bvTomaszGre
+Region ofinterestpooIing.taIso known as RoI pooIingjis an operation wideIv used
+in object detection tasks using.convoIutional neuraI networks. For exampIe, to detect
+muItipIe cars and pedestrians in asingIe image Its purpose is to perform max pooIing
+on inouts of nonuniform sizes to obtain fixed.size feature maos te.g. 7x7j.
+Weve iust reIeased an open.source impIementation ofRoI pooIing Iaver for TensorFIow
+tyoucan findithgrgj inthis oost, weregoingtosay afew words aboutthis interestingneuraI
+network Iaver. But first, Iets start with some background.
+Two maior tasks in computer vision are obiect cIassificatior and obiect detection. In the first
