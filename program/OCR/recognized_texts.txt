@@ -1,10 +1,18 @@
-Region of interest pooIing expIained
-Fei ruan 28. 2047 .Datascience,Deej teamninq Machine ieamina .bvTomaszGre
-Region ofinterestpooIing.taIso known as RoI pooIingjis an operation wideIv used
-in object detection tasks using.convoIutional neuraI networks. For exampIe, to detect
-muItipIe cars and pedestrians in asingIe image Its purpose is to perform max pooIing
-on inouts of nonuniform sizes to obtain fixed.size feature maos te.g. 7x7j.
-Weve iust reIeased an open.source impIementation ofRoI pooIing Iaver for TensorFIow
-tyoucan findithgrgj inthis oost, weregoingtosay afew words aboutthis interestingneuraI
-network Iaver. But first, Iets start with some background.
-Two maior tasks in computer vision are obiect cIassificatior and obiect detection. In the first
+i i CHAPTER IX i
+i pinocchio i Goes qo see A pUPPET48How
+miss andto along he soon l6.l6f8.I his as a fne it thousand to i stopged.snsyji imagine ghosties i snowing thousand lI andre Pinocchio i tihe thingg air his 9fffi, ofit set i boy his out for little for beautiful ian seol brain Went i
+i i i thatthe i other i
+And,talking to .himself,he guide
+i ..gF4i,.gjg,j s.gj,.ljlgg slam cost morrow made poor SSglslmjg.g,gsj.j5g what and .efa.,g, really with to i deserve for win write j.SggFgg it i money for a to indeed buy diamond me earn books buttons 8. to be i
+have thiseoldf e,,me.4eught.he. he hag fathers remsinedin who yo capable his shirt.gleeves. ofsuch sscrificesf?4 Andin
+i big that the whistle he Ib6g.UiIgOf8 heard was music rss.ssyipg,th biQ GrtlIIc this distance 1Fx6e5,irir5,sum,1wum.zua with grestemotion,1he that sounded like thcqght.
+i He stopped sndlistened. i the sounds i came from i the end i
+fa cross ,tretoe,ts41w.1itle.tluge a on4keseshore. on
+,?YVhet.can.thst.musie be Whstspity a i that it have eto
+i go dog school i or i i else'll i
+i
+i i by i i O i i I i i
+i i i i oil i I i irl i 8 i i i rail i
+I
+i i i , I i i i
+i A

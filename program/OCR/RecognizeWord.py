@@ -83,7 +83,7 @@ act_model.load_weights('CRNN_model.hdf5')
 def recognize_words(line_indicator,word_array,n_lines):
 
     file=open('recognized_texts.txt','w')
-
+    
     line_rec=[]
     for listidx in range(n_lines):
         line_rec.append([])
@@ -102,11 +102,11 @@ def recognize_words(line_indicator,word_array,n_lines):
         for char in wordidxs:
             if int(char)!=-1:
                 word.append(char_list[int(char)])
-        #word=spell.correction(''.join(word))
+        word=spell.correction(''.join(word))
         word=''.join(word)
         line_rec[line_indicator[lw_idx]].append(word)
         lw_idx+=1
-
+    print('\nRecognized text:')
     for listidx in range(n_lines):
         line=' '.join(line_rec[listidx])
         print(line)
