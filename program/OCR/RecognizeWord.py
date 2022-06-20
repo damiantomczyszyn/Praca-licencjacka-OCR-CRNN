@@ -20,14 +20,11 @@ spell = SpellChecker()
 
 
 punclist='.?,'
-punclist2="-+/()[]!`,|*&^%$#@'"
-
 
 smallletters=string.ascii_lowercase
 capitalletters=string.ascii_uppercase
 digits=string.digits
-char_list=smallletters+capitalletters+digits+punclist#+punclist2#+'`'	#dla interpunkcji
-#char_list = string.ascii_letters+string.digits		#dla podstawowego
+char_list=smallletters+capitalletters+digits+punclist
 
 
 
@@ -82,7 +79,7 @@ act_model.load_weights('CRNN_model.hdf5')
 
 def recognize_words(line_indicator,word_array,n_lines):
 
-    file=open('recognized_texts.txt','w')
+    file=open('recognized_texts.txt','a')
     
     line_rec=[]
     for listidx in range(n_lines):
