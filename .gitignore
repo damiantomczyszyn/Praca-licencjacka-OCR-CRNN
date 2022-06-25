@@ -1,7 +1,4 @@
 Program/
 *.h5
 *.hdf5
-program_test/CRNN/content/Data-generator-for-CRNN/images/
-program_test/CRNN/content/Data-generator-for-CRNN/annotation.txt
-program_test/CRNN/content/Data-generator-for-CRNN/max_label_len.txt
 #example comment

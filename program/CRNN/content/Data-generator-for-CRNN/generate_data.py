@@ -10,19 +10,19 @@ import cv2
 parser=argparse.ArgumentParser()
 parser.add_argument('--n_samples',type=int,default=50)
 parser.add_argument('--word_type',default='all')
+parser.add_argument('--rotation_degree',type=int, default=0)
 args=parser.parse_args()
 
 global gray_back
 kernel=np.ones((2,2),np.uint8)
 kernel2=np.ones((1,1),np.uint8)
-punclist='.?:;"'
-punclist2="-+/()[]!`,|*&^%$#@'"
+punclist='.?,'
 
 #Character sets to choose from.
 smallletters=string.ascii_lowercase
 capitalletters=string.ascii_uppercase
 digits=string.digits
-alll=smallletters+capitalletters+digits+punclist+punclist2
+alll=smallletters+capitalletters+digits+punclist
 
 
 
@@ -55,7 +55,7 @@ file_counter=0
 
 def random_brightness(img):
     img=np.array(img)
-    brightness=iaa.Multiply((0.5,1.1))
+    brightness=iaa.Multiply((0.6,1.1))
     img=brightness.augment_image(img)
     return img
 
@@ -117,6 +117,7 @@ Path("images").mkdir(parents=True, exist_ok=True)
 file=open('annotation.txt','w')
 
 file_counter=0
+max_label_len = 0
 
 for _ in range(args.n_samples):
 
@@ -143,31 +144,37 @@ for _ in range(args.n_samples):
     w,h=font.getsize(word)[0],font.getsize(word)[1]
     
     
-    
-    
-    back_c=back_c.resize((w+5,h+5))# aby dodać losowo to zamiast +5 daj +rand_pad()
-    draw=ImageDraw.Draw(back_c)#narysuj maskę    
-    draw.text((0,0),text=word,font=font,fill='rgb(0,0,0)')# narysuj text na masce
-    # jeśli chcemy rysować pochylony tekst to należy zmniejszyć maskę do minimum
-    #Narysować na niej tekst
-    #obrócić całość o kąt
-    # i wklić w większą maskę całego już obrazu która jest pozioma 
-    
-    
-    
-    
-    
-    
-    #back_c = back_c.rotate(30)
+    if args.rotation_degree!=0:
+    	
+        width, height = font.getsize(word)
+        image2 = Image.new('RGBA', (width, height), (0, 0, 0, 0))
+        draw2 = ImageDraw.Draw(image2)
+        draw2.text((0, 0), text=word, font=font, fill=(0, 0, 0))
 
-    back_c=random_transformation(back_c)# zniekształcanie obrazu
+        angle = random.randrange(-1*rotation_degree,rotation_degree)
+        image2 = image2.rotate(angle, resample=Image.BICUBIC, expand=True)
+        sx, sy = image2.size
+
+	   
+        back_c=back_c.resize(( 10 + sx, 10 + sy))
+        back_c.paste(image2, (5, 5, 5 + sx, 5 + sy), image2)
+        back_c=random_transformation(back_c)
+    else:
+        back_c=back_c.resize((w+5,h+5))# aby dodać losowo to zamiast +5 daj +rand_pad()
+        draw=ImageDraw.Draw(back_c)#narysuj maskę    
+        draw.text((0,0),text=word,font=font,fill='rgb(0,0,0)')# narysuj text na masce
+        back_c=random_transformation(back_c)# zniekształcanie obrazu
+    
+    
+    
     back_c.save(f'images/{file_counter}_{filename}.jpg')
     file.writelines(str(file_counter)+'_'+filename+'.jpg'+'~'+word+'\n')
     file_counter+=1
 
 
 
-
+#file=open('max_label_len.txt','w')
+#file.writelines(str(max_label_len))
 
 
 

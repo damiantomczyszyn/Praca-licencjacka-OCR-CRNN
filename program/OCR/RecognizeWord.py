@@ -20,14 +20,11 @@ spell = SpellChecker()
 
 
 punclist='.?,'
-punclist2="-+/()[]!`,|*&^%$#@'"
-
 
 smallletters=string.ascii_lowercase
 capitalletters=string.ascii_uppercase
 digits=string.digits
-char_list=smallletters+capitalletters+digits+punclist#+punclist2#+'`'	#dla interpunkcji
-#char_list = string.ascii_letters+string.digits		#dla podstawowego
+char_list=smallletters+capitalletters+digits+punclist
 
 
 
@@ -75,18 +72,15 @@ act_model = Model(inputs, outputs)
 
 
 
-act_model.load_weights('wszystkie_duze_male98.hdf5') # wszystkie znaki bez przecinka , nie działa wypisuje SSSSS jako odstepy
-#act_model.load_weights('CRNN_model_downloaded.hdf5')# male litery podstawowy pobrany
-#act_model.load_weights('my_CRNN_model.hdf5')# male litery podstawowy przeszkolony samemu, tutaj powiela  eee na końcu wyrazów
-#act_model.load_weights('myn_best_model.hdf5')# male litery podstawowy przeszkolony samemu, tutaj działa
+act_model.load_weights('CRNN_model.hdf5') 
 
 
 
 
 def recognize_words(line_indicator,word_array,n_lines):
 
-    file=open('recognized_texts.txt','w')
-
+    file=open('recognized_texts.txt','a')
+    
     line_rec=[]
     for listidx in range(n_lines):
         line_rec.append([])
@@ -105,11 +99,11 @@ def recognize_words(line_indicator,word_array,n_lines):
         for char in wordidxs:
             if int(char)!=-1:
                 word.append(char_list[int(char)])
-        #word=spell.correction(''.join(word))
+        word=spell.correction(''.join(word))
         word=''.join(word)
         line_rec[line_indicator[lw_idx]].append(word)
         lw_idx+=1
-
+    print('\nRecognized text:')
     for listidx in range(n_lines):
         line=' '.join(line_rec[listidx])
         print(line)
