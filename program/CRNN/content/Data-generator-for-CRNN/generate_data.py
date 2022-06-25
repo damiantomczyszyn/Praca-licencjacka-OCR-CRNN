@@ -16,13 +16,13 @@ args=parser.parse_args()
 global gray_back
 kernel=np.ones((2,2),np.uint8)
 kernel2=np.ones((1,1),np.uint8)
-punclist='.?,()":-'
+punclist='.?,'
 
 #Character sets to choose from.
 smallletters=string.ascii_lowercase
 capitalletters=string.ascii_uppercase
 digits=string.digits
-alll=smallletters+capitalletters+digits+punclist+"'"
+alll=smallletters+capitalletters+digits+punclist
 
 
 
